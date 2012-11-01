@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
   s.homepage = 'https://github.com/bsideup/TLBindings'
   s.author   = { 'Sergey Egorov' => 'bsideup@gmail.com' }
   s.source   = { :git => 'https://github.com/bsideup/TLBindings.git',
-		 :commit => 'HEAD' }
+		 :tag => '0.1' }
 
   s.source_files = 'TLBindings/*.{h,m}'
   s.requires_arc = true
