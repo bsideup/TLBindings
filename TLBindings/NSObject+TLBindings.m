@@ -70,4 +70,15 @@ static char bindingsKey;
 	}
 }
 
+- (void) unbindAll
+{
+	NSMutableDictionary *result = objc_getAssociatedObject( self, &bindingsKey );
+
+	if ( result )
+	{
+		[result removeAllObjects];
+	}
+
+}
+
 @end

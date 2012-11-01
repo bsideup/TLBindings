@@ -25,4 +25,6 @@
 			 withStringFormat:(NSString *)stringFormat;
 
 - ( void ) unbindProperty:(NSString *)sourcePropertyKeyPath;
+
+- (void) unbindAll;
 @end
