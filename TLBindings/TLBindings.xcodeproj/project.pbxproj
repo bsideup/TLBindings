@@ -1,0 +1,247 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		49609F6D1642918F0088BD0B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49609F6C1642918F0088BD0B /* Foundation.framework */; };
+		49609F7E164291B30088BD0B /* NSObject+bindings.m in Sources */ = {isa = PBXBuildFile; fileRef = 49609F7B164291B30088BD0B /* NSObject+bindings.m */; };
+		49609F7F164291B30088BD0B /* WhenObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 49609F7D164291B30088BD0B /* WhenObserver.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		49609F671642918F0088BD0B /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/${PRODUCT_NAME}";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		49609F691642918F0088BD0B /* libTLBindings.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTLBindings.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		49609F6C1642918F0088BD0B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		49609F701642918F0088BD0B /* TLBindings-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TLBindings-Prefix.pch"; sourceTree = "<group>"; };
+		49609F7A164291B30088BD0B /* NSObject+bindings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+bindings.h"; sourceTree = "<group>"; };
+		49609F7B164291B30088BD0B /* NSObject+bindings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+bindings.m"; sourceTree = "<group>"; };
+		49609F7C164291B30088BD0B /* WhenObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WhenObserver.h; sourceTree = "<group>"; };
+		49609F7D164291B30088BD0B /* WhenObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WhenObserver.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		49609F661642918F0088BD0B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49609F6D1642918F0088BD0B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		49609F5E1642918F0088BD0B = {
+			isa = PBXGroup;
+			children = (
+				49609F6E1642918F0088BD0B /* TLBindings */,
+				49609F6B1642918F0088BD0B /* Frameworks */,
+				49609F6A1642918F0088BD0B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		49609F6A1642918F0088BD0B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				49609F691642918F0088BD0B /* libTLBindings.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		49609F6B1642918F0088BD0B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				49609F6C1642918F0088BD0B /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		49609F6E1642918F0088BD0B /* TLBindings */ = {
+			isa = PBXGroup;
+			children = (
+				49609F7A164291B30088BD0B /* NSObject+bindings.h */,
+				49609F7B164291B30088BD0B /* NSObject+bindings.m */,
+				49609F7C164291B30088BD0B /* WhenObserver.h */,
+				49609F7D164291B30088BD0B /* WhenObserver.m */,
+				49609F6F1642918F0088BD0B /* Supporting Files */,
+			);
+			path = TLBindings;
+			sourceTree = "<group>";
+		};
+		49609F6F1642918F0088BD0B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				49609F701642918F0088BD0B /* TLBindings-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		49609F681642918F0088BD0B /* TLBindings */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 49609F771642918F0088BD0B /* Build configuration list for PBXNativeTarget "TLBindings" */;
+			buildPhases = (
+				49609F651642918F0088BD0B /* Sources */,
+				49609F661642918F0088BD0B /* Frameworks */,
+				49609F671642918F0088BD0B /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TLBindings;
+			productName = TLBindings;
+			productReference = 49609F691642918F0088BD0B /* libTLBindings.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		49609F601642918F0088BD0B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = TryLogic;
+			};
+			buildConfigurationList = 49609F631642918F0088BD0B /* Build configuration list for PBXProject "TLBindings" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 49609F5E1642918F0088BD0B;
+			productRefGroup = 49609F6A1642918F0088BD0B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				49609F681642918F0088BD0B /* TLBindings */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		49609F651642918F0088BD0B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49609F7E164291B30088BD0B /* NSObject+bindings.m in Sources */,
+				49609F7F164291B30088BD0B /* WhenObserver.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		49609F751642918F0088BD0B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		49609F761642918F0088BD0B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		49609F781642918F0088BD0B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/TLBindings.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TLBindings/TLBindings-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		49609F791642918F0088BD0B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/TLBindings.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TLBindings/TLBindings-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		49609F631642918F0088BD0B /* Build configuration list for PBXProject "TLBindings" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49609F751642918F0088BD0B /* Debug */,
+				49609F761642918F0088BD0B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		49609F771642918F0088BD0B /* Build configuration list for PBXNativeTarget "TLBindings" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49609F781642918F0088BD0B /* Debug */,
+				49609F791642918F0088BD0B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 49609F601642918F0088BD0B /* Project object */;
+}
