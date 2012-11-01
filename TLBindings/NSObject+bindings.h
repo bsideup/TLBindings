@@ -16,5 +16,10 @@
 					 of:(id)targetPropertyOwner
 	 withTransformation:(id (^)(id))aValueBlock;
 
+- ( void ) bindStringProperty:(NSString *)sourcePropertyKeyPath
+			 toProperty:(NSString *)targetPropertyKeyPath
+					 of:(id)targetPropertyOwner
+	 withStringFormat:(NSString *)stringFormat;
+
 - ( void ) unbindProperty:(NSString *)sourcePropertyKeyPath;
 @end

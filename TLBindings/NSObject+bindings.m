@@ -36,11 +36,27 @@ static char bindingsKey;
 
 	WhenObserver *observer = [[WhenObserver alloc] initWithProperty:targetPropertyKeyPath of:targetPropertyOwner doBlock:^( id newValue )
 	{
-		[self setValue:aValueBlock( newValue ) forKeyPath:sourcePropertyKeyPath];
+		[self setValue:(aValueBlock ? aValueBlock( newValue ) : newValue) forKeyPath:sourcePropertyKeyPath];
 	}];
 
 	[bindings setObject:observer forKey:sourcePropertyKeyPath];
 }
+
+- ( void ) bindStringProperty:(NSString *)sourcePropertyKeyPath
+				   toProperty:(NSString *)targetPropertyKeyPath
+						   of:(id)targetPropertyOwner
+			 withStringFormat:(NSString *)stringFormat
+{
+	NSMutableDictionary *bindings = self.getBindings;
+
+	WhenObserver *observer = [[WhenObserver alloc] initWithProperty:targetPropertyKeyPath of:targetPropertyOwner doBlock:^( id newValue )
+	{
+		[self setValue:[NSString stringWithFormat:stringFormat, newValue] forKeyPath:sourcePropertyKeyPath];
+	}];
+
+	[bindings setObject:observer forKey:sourcePropertyKeyPath];
+}
+
 
 - ( void ) unbindProperty:(NSString *)sourcePropertyKeyPath
 {
