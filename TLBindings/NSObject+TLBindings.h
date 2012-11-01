@@ -9,12 +9,16 @@
 
 @class WhenObserver;
 
-@interface NSObject (bindings)
+@interface NSObject (TLBindings)
 
 - ( void ) bindProperty:(NSString *)sourcePropertyKeyPath
 			 toProperty:(NSString *)targetPropertyKeyPath
 					 of:(id)targetPropertyOwner
 	 withTransformation:(id (^)(id))aValueBlock;
+
+- ( void ) bindProperty:(NSString *)sourcePropertyKeyPath
+			 toProperty:(NSString *)targetPropertyKeyPath
+					 of:(id)targetPropertyOwner;
 
 - ( void ) bindStringProperty:(NSString *)sourcePropertyKeyPath
 			 toProperty:(NSString *)targetPropertyKeyPath

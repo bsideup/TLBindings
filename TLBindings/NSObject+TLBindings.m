@@ -6,13 +6,13 @@
 
 
 #import <objc/runtime.h>
-#import "NSObject+bindings.h"
+#import "NSObject+TLBindings.h"
 #import "WhenObserver.h"
 
 
 static char bindingsKey;
 
-@implementation NSObject (bindings)
+@implementation NSObject (TLBindings)
 
 - ( NSMutableDictionary * ) getBindings
 {
@@ -25,6 +25,13 @@ static char bindingsKey;
 	}
 
 	return result;
+}
+
+- ( void ) bindProperty:(NSString *)sourcePropertyKeyPath
+			 toProperty:(NSString *)targetPropertyKeyPath
+					 of:(id)targetPropertyOwner
+{
+	[self bindProperty:sourcePropertyKeyPath toProperty:targetPropertyKeyPath of:targetPropertyOwner withTransformation:nil];
 }
 
 - ( void ) bindProperty:(NSString *)sourcePropertyKeyPath
