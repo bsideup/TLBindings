@@ -6,25 +6,22 @@
 
 
 #import <Foundation/Foundation.h>
-#import "WhenObserver.h"
+
+@class TLWhenObserver;
 
 @interface NSObject (TLBindings)
 
-- ( WhenObserver * ) bindProperty:(NSString *)sourcePropertyKeyPath
-			 toProperty:(NSString *)targetPropertyKeyPath
-					 of:(id)targetPropertyOwner
-	 withTransformation:(id (^)(id))aValueBlock;
+- ( TLWhenObserver * ) bind:(NSString *)sourcePropertyKeyPath
+				 toProperty:(NSString *)targetPropertyKeyPath
+						 of:(id)targetPropertyOwner
+		 withTransformation:(id (^)(id))aValueBlock;
 
-- ( WhenObserver * ) bindProperty:(NSString *)sourcePropertyKeyPath
-			 toProperty:(NSString *)targetPropertyKeyPath
-					 of:(id)targetPropertyOwner;
+- ( TLWhenObserver * ) bind:(NSString *)sourcePropertyKeyPath
+				 toProperty:(NSString *)targetPropertyKeyPath
+						 of:(id)targetPropertyOwner;
 
-- ( WhenObserver * ) bindStringProperty:(NSString *)sourcePropertyKeyPath
-				   toProperty:(NSString *)targetPropertyKeyPath
-						   of:(id)targetPropertyOwner
-			 withStringFormat:(NSString *)stringFormat;
-
-- ( void ) unbindProperty:(NSString *)sourcePropertyKeyPath;
-
-- (void) unbindAll;
+- ( TLWhenObserver * ) bindString:(NSString *)sourcePropertyKeyPath
+					   toProperty:(NSString *)targetPropertyKeyPath
+							   of:(id)targetPropertyOwner
+				 withStringFormat:(NSString *)stringFormat;
 @end

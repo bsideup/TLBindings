@@ -8,7 +8,7 @@
 #import <Foundation/Foundation.h>
 
 
-@interface WhenObserver : NSObject
+@interface TLWhenObserver : NSObject
 
 - ( id ) initWithProperty:(NSString *)aProperty
 					   of:(NSObject *)aOf

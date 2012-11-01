@@ -5,10 +5,10 @@
 //
 
 
-#import "WhenObserver.h"
+#import "TLWhenObserver.h"
 
 
-@implementation WhenObserver
+@implementation TLWhenObserver
 {
 
 	NSString *property;
@@ -52,7 +52,7 @@
 
 - ( void ) dealloc
 {
-	NSLog( @"WhenObserver dealloc" );
+	NSLog( [@"WhenObserver dealloc for " stringByAppendingString:property] );
 	[of removeObserver:self forKeyPath:property];
 	of = nil;
 	property = nil;
