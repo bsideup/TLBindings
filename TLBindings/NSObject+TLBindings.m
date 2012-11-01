@@ -7,8 +7,6 @@
 
 #import <objc/runtime.h>
 #import "NSObject+TLBindings.h"
-#import "WhenObserver.h"
-
 
 static char bindingsKey;
 
@@ -27,14 +25,25 @@ static char bindingsKey;
 	return result;
 }
 
-- ( void ) bindProperty:(NSString *)sourcePropertyKeyPath
+- ( WhenObserver * ) bindProperty:(NSString *)sourcePropertyKeyPath
 			 toProperty:(NSString *)targetPropertyKeyPath
 					 of:(id)targetPropertyOwner
 {
-	[self bindProperty:sourcePropertyKeyPath toProperty:targetPropertyKeyPath of:targetPropertyOwner withTransformation:nil];
+	return [self bindProperty:sourcePropertyKeyPath toProperty:targetPropertyKeyPath of:targetPropertyOwner withTransformation:nil];
 }
 
-- ( void ) bindProperty:(NSString *)sourcePropertyKeyPath
+- ( WhenObserver * ) bindStringProperty:(NSString *)sourcePropertyKeyPath
+				   toProperty:(NSString *)targetPropertyKeyPath
+						   of:(id)targetPropertyOwner
+			 withStringFormat:(NSString *)stringFormat
+{
+	return [self bindProperty:sourcePropertyKeyPath toProperty:targetPropertyKeyPath of:targetPropertyOwner withTransformation:^( id newValue )
+	{
+		return [NSString stringWithFormat:stringFormat, newValue];
+	}];
+}
+
+- ( WhenObserver * ) bindProperty:(NSString *)sourcePropertyKeyPath
 			 toProperty:(NSString *)targetPropertyKeyPath
 					 of:(id)targetPropertyOwner
 	 withTransformation:(id (^)(id))aValueBlock
@@ -43,27 +52,13 @@ static char bindingsKey;
 
 	WhenObserver *observer = [[WhenObserver alloc] initWithProperty:targetPropertyKeyPath of:targetPropertyOwner doBlock:^( id newValue )
 	{
-		[self setValue:(aValueBlock ? aValueBlock( newValue ) : newValue) forKeyPath:sourcePropertyKeyPath];
+		[self setValue:( aValueBlock ? aValueBlock( newValue ) : newValue ) forKeyPath:sourcePropertyKeyPath];
 	}];
 
 	[bindings setObject:observer forKey:sourcePropertyKeyPath];
+
+	return observer;
 }
-
-- ( void ) bindStringProperty:(NSString *)sourcePropertyKeyPath
-				   toProperty:(NSString *)targetPropertyKeyPath
-						   of:(id)targetPropertyOwner
-			 withStringFormat:(NSString *)stringFormat
-{
-	NSMutableDictionary *bindings = self.getBindings;
-
-	WhenObserver *observer = [[WhenObserver alloc] initWithProperty:targetPropertyKeyPath of:targetPropertyOwner doBlock:^( id newValue )
-	{
-		[self setValue:[NSString stringWithFormat:stringFormat, newValue] forKeyPath:sourcePropertyKeyPath];
-	}];
-
-	[bindings setObject:observer forKey:sourcePropertyKeyPath];
-}
-
 
 - ( void ) unbindProperty:(NSString *)sourcePropertyKeyPath
 {
