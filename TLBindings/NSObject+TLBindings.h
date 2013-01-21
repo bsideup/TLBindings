@@ -24,4 +24,8 @@
 					   toProperty:(NSString *)targetPropertyKeyPath
 							   of:(id)targetPropertyOwner
 				 withStringFormat:(NSString *)stringFormat;
+
+
+-(TLWhenObserver *) whenProperty:(NSString *)sourcePropertyKeyPath
+					 isChangedDo:(void (^)(id))aBlock;
 @end

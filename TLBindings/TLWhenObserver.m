@@ -52,7 +52,6 @@
 
 - ( void ) dealloc
 {
-	NSLog( [@"WhenObserver dealloc for " stringByAppendingString:property] );
 	[of removeObserver:self forKeyPath:property];
 	of = nil;
 	property = nil;
